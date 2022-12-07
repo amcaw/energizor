@@ -18,7 +18,6 @@ df = pd.DataFrame(myjson, columns=['marketStrip','lastPrice'])
 
 df.to_csv("TTF_Contrats_Gaz_2023.csv", index=False)
 
-******
 
 #TTF Global, correspond à ceci https://www.theice.com/products/27996665/Dutch-TTF-Natural-Gas-Futures/data?marketId=5477499&span=2
 
