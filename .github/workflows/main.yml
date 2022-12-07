@@ -11,9 +11,6 @@ jobs:
 
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content to github runnerzz
-        
-      - name: Better Wait Action
-        uses: whatnick/wait-action@v0.1.2
 
       - name: setup python
         uses: actions/setup-python@v2
@@ -29,7 +26,7 @@ jobs:
         env: 
           api_key: ${{ secrets.api_key }}
           run: python ENTSOE.py
-        
+  
       - name: Sleep for 30 seconds
         uses: whatnick/wait-action@master
         with:
@@ -37,7 +34,6 @@ jobs:
         
       - name: lance calcul
         run: python BE_day.py
-        
         
       - name: Commit files
         run: |
