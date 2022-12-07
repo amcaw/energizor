@@ -23,4 +23,8 @@ new_df = result['Value'].resample('M').mean().reset_index()
 
 new_df['Value'] = new_df['Value'].round(2)
 
+new_df['pct_change'] = new_df['Value'].pct_change()
+
+new_df['pct_change'] = new_df['pct_change']*100
+
 new_df.to_csv('BE_day.csv')
