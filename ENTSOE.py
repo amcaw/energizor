@@ -19,5 +19,3 @@ country_code = 'BE'  #
 day_ahead_prices_BE = client.query_day_ahead_prices(country_code, start=start, end=end)
 
 day_ahead_prices_BE.to_csv('./outfile.csv')
-
-time.sleep(30)
