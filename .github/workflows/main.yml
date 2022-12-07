@@ -25,7 +25,7 @@ jobs:
       - name: execute eu script 
         env: 
           api_key: ${{ secrets.api_key }}
-          run: python ENTSOE.py
+        run: python ENTSOE.py
         
       - name: lance calcul
         run: python BE_day.py
