@@ -27,4 +27,6 @@ new_df['pct_change'] = new_df['Value'].pct_change()
 
 new_df['pct_change'] = new_df['pct_change']*100
 
+new_df['date_jour'] = dt.datetime.today().strftime("%e %B")
+
 new_df.to_csv('BE_day.csv')
