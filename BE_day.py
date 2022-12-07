@@ -26,10 +26,10 @@ new_df['Value'] = new_df['Value'].round(2)
 
 new_df['pct_change'] = new_df['Value'].pct_change()
 
-new_df['pct_change'] = new_df['pct_change']*100
+new_df['pct_change'] = (new_df['pct_change']*100).round(2)
 
 new_df.style.format({'pct_change':"{0:+g}"})
 
-new_df['date_jour'] = dt.datetime.today().strftime("%e %B")
+new_df['date_jour'] = dt.datetime.today().strftime("%e/%b/%Y")
 
 new_df.to_csv('BE_day.csv')
