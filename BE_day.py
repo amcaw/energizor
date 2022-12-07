@@ -1,6 +1,5 @@
 import pandas as pd
 from datetime import datetime, timedelta
-import datetime
 
 df = pd.read_csv('https://raw.githubusercontent.com/amcaw/energizor/main/outfile.csv')
 
@@ -29,7 +28,7 @@ new_df['pct_change'] = new_df['Value'].pct_change()
 
 new_df['pct_change'] = (new_df['pct_change']*100).round(2)
 
-new_df['date_jour'] = dt.datetime.today().strftime("%e/%b/%Y")
+new_df['date_jour'] = datetime.datetime.today().strftime("%e/%b/%Y")
 
 new_df['today'] = datetime.datetime.today().strftime('%d/%m/%Y à %H:%M')
 
