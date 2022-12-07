@@ -27,6 +27,14 @@ jobs:
           api_key: ${{ secrets.api_key }}
         run: python ENTSOE.py
         
+      - name: Commit files
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add --all
+          git commit -am "add data"
+          git push
+          
       - name: lance BE
         run: python BE_day.py
         
