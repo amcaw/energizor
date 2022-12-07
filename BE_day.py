@@ -21,4 +21,6 @@ result.set_index('Date',inplace=True)
 
 new_df = result['Value'].resample('M').mean().reset_index()
 
+new_df['Value'] = new_df['Value'].round(2)
+
 new_df.to_csv('BE_day.csv')
