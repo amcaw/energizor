@@ -38,6 +38,9 @@ jobs:
       - name: lance BE
         run: python BE_day.py
         
+      - name: lance Gaz
+        run: python gaz.py
+        
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
