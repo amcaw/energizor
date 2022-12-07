@@ -1,8 +1,8 @@
 name: Robot data
 
-# Cron 
+# Cron pour faire fonctionner le script à 8h du lundi au vendredi
 on:
-  push:
+ push:
   
 jobs:
   build:
@@ -22,12 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute eu script 
+      - name: execute all script 
         env: 
           api_key: ${{ secrets.api_key }}
         run: python ENTSOE.py
         
-      - name: lance calcul
+      - name: lance BE
         run: python BE_day.py
         
       - name: Commit files
