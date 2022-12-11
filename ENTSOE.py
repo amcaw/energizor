@@ -3,12 +3,6 @@ import os
 import pandas as pd
 from entsoe import EntsoePandasClient
 
-import pandas as pd
-from entsoe import EntsoePandasClient
-
-import time
-from time import sleep
-
 # %% parameter definitions
 client = EntsoePandasClient(api_key=os.environ['api_key'])
 
