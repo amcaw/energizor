@@ -17,10 +17,12 @@ day_ahead_prices_BE = client.query_day_ahead_prices(country_code, start=start, e
 
 df = day_ahead_prices_BE.to_frame('Value')
 
-belpex_daily_avg = df.resample("D", origin="2001-01-01 00:00:00+01:00",label="left").mean()
+df = df.resample("M", origin="2001-01-01 00:00:00+01:00",label="left").mean()
 
-belpex_monthly_avg = belpex_daily_avg['Value'].resample('M').mean()
+df['date_jour'] = dt.datetime.today().strftime("%e/%m/%Y")
 
-belpex_monthly_avg['date_jour'] = dt.datetime.today().strftime("%e/%m/%Y")
+df['pct_change'] = df['Value'].pct_change()
 
-belpex_monthly_avg.to_csv('./BE_day.csv')
+df['pct_change'] = (df['pct_change']*100).round(2)
+
+df.to_csv('./BE_day.csv')
