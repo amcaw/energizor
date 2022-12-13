@@ -3,6 +3,9 @@ import os
 import pandas as pd
 from entsoe import EntsoePandasClient
 
+from datetime import datetime, timedelta
+import datetime as dt
+
 # %% parameter definitions
 client = EntsoePandasClient(api_key=os.environ['api_key'])
 
@@ -17,5 +20,7 @@ df = day_ahead_prices_BE.to_frame('Value')
 belpex_daily_avg = df.resample("D", origin="2001-01-01 00:00:00+01:00",label="left").mean()
 
 belpex_monthly_avg = belpex_daily_avg['Value'].resample('M').mean()
+
+belpex_monthly_avg['date_jour'] = dt.datetime.today().strftime("%e/%m/%Y")
 
 belpex_monthly_avg.to_csv('./BE_day.csv')
