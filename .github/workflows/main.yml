@@ -29,10 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute all script 
+      - name: elec be
         env: 
           api_key: ${{ secrets.api_key }}
         run: python ENTSOE.py
+        
+      - name: gaz be
+        run: python ttf.py
+        
         
       - name: Commit files
         run: |
