@@ -28,4 +28,4 @@ df.set_index('Date',inplace=True)
 
 df = df['Value'].resample('Y').mean()
 
-df.to_csv("gaz_mean.csv", index=False)
+df.to_csv("gaz_mean.csv", index=True)
