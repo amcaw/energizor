@@ -37,6 +37,8 @@ jobs:
       - name: gaz be
         run: python ttf.py
         
+      - name: endex be
+        run: python endex.py
         
       - name: Commit files
         run: |
