@@ -3,7 +3,7 @@ name: Robot data
 # Cron pour faire fonctionner le script à 7h
 on:
  push:
- #schedule:
+ ##schedule:
   #- cron: "0 6 * * *"
   
 jobs:
