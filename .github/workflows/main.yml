@@ -2,9 +2,9 @@ name: Robot data
 
 # Cron pour faire fonctionner le script à 7h du matin
 on:
- push:
- #schedule:
-  #- cron: "0 6 * * *"
+ #push:
+ schedule:
+  - cron: "0 6 * * *"
   
 jobs:
   build:
@@ -28,12 +28,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          
+
+      - name: elec be
+        env: 
+          api_key: ${{ secrets.api_key }}
+        run: python ENTSOE.py
         
       - name: gaz be
         run: python ttf.py
-       
-        
+
+      - name: endex be
+        run: python endex.py
+
       - name: Commit files
         run: |
           git config --local user.email "actions@github.com"
