@@ -2,7 +2,14 @@ import pandas as pd
 
 df = pd.read_csv("https://guillaumederval.github.io/endexHistory/data.csv").set_index("date")
 
-#TTF 101
+#TTF 101 histo
+
+df3 = df[(df["product"] == "Q1-23") & (df["market"] == "BPB")]
+
+df3.to_csv('ttf_histo.csv')
+
+#TTF 101 mean
+
 df2 = df.loc["2022-12":]
 
 df4 = df2[(df2["product"] == "FEB-23") & (df2["market"] == "TFM")].value.mean().round(2)
