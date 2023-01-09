@@ -9,7 +9,7 @@ import datetime as dt
 # %% parameter definitions
 client = EntsoePandasClient(api_key=os.environ['api_key'])
 
-start = pd.Timestamp('20230101', tz ='UTC')
+start = pd.Timestamp('20220101', tz ='UTC')
 end = pd.Timestamp('20231231', tz ='UTC')
 country_code = 'BE'  # 
 
