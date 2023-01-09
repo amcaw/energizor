@@ -4,7 +4,7 @@ df = pd.read_csv("https://guillaumederval.github.io/endexHistory/data.csv").set_
 
 #TTF 101 histo
 
-df3 = df[(df["product"] == "Q1-23") & (df["market"] == "BPB")]
+df3 = df[(df["product"] == "FEB-23") & (df["market"] == "TFM")]
 
 df3.to_csv('ttf_histo.csv')
 
