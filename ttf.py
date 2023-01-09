@@ -3,7 +3,7 @@ import pandas as pd
 
 #TTF Global, correspond à ceci https://www.theice.com/products/27996665/Dutch-TTF-Natural-Gas-Futures/data?marketId=5477499&span=2
 
-url = 'https://www.theice.com/marketdata/DelayedMarkets.shtml?getHistoricalChartDataAsJson=&marketId=5477499&historicalSpan=2'
+url = 'https://www.theice.com/marketdata/DelayedMarkets.shtml?getHistoricalChartDataAsJson=&marketId=5493476&historicalSpan=2'
 
 headers = {
     'Accept': 'application/json',
