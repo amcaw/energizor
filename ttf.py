@@ -7,4 +7,6 @@ df2 = df2.loc["2022-12":]
 df2 = df2.reset_index()
 df2 = df2[(df2["product"] == "FEB-23") & (df2["market"] == "TFM")].value.mean()
 
-df2.to_csv("gaz_mean.csv", index=False)
+df2 = df2[['date', 'value']]
+
+df.to_csv("gaz_mean.csv")
