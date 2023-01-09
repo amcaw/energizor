@@ -30,6 +30,6 @@ df['Date'] = pd.to_datetime(df['Date'])
 
 df.set_index('Date',inplace=True) 
 
-df = df['Value'].resample('Y').mean().round(2)
+df = df['Value'].resample('M').mean().round(2)
 
 df.to_csv("gaz_mean.csv", index=True)
