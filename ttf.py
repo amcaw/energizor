@@ -24,7 +24,7 @@ df.to_csv("TTF_evo_gaz.csv", index=False)
 
 #now to calculate BE data for january
 
-df = df.loc[df["Date"].between("2022-12-01", "2022-12-31")]
+df = df.loc[df["Date"].between("2023-01-01", "2023-01-31")]
 
 df['Date'] = pd.to_datetime(df['Date'])
 
