@@ -2,9 +2,9 @@ name: Robot data
 
 # Cron pour faire fonctionner le script à 7h du matin
 on:
- #push:
- schedule:
-  - cron: "0 6 * * *"
+ push:
+ #schedule:
+  #- cron: "0 6 * * *"
   
 jobs:
   build:
@@ -39,6 +39,9 @@ jobs:
 
       - name: endex be
         run: python endex.py
+        
+      - name: ttf_old
+        run: python ttf_old.py
 
       - name: Commit files
         run: |
