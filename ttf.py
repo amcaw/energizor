@@ -10,9 +10,9 @@ df3.to_csv('ttf_histo.csv')
 
 #TTF 101 mean
 
-df2 = df.loc["2023-01":]
+df2 = df.loc["2023-02":]
 
-df4 = df2[(df2["product"] == "FEB-23") & (df2["market"] == "TFM")].value.mean().round(2)
+df4 = df2[(df2["product"] == "MAR-23") & (df2["market"] == "TFM")].value.mean().round(2)
 
 df4 = pd.DataFrame([['ttf_101',df4]], columns=['name', 'Value'])
 
