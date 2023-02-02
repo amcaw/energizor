@@ -1,6 +1,6 @@
 import pandas as pd
 
-#df = pd.read_csv("https://guillaumederval.github.io/endexHistory/data.csv").set_index("date")
+df2 = pd.read_csv("https://guillaumederval.github.io/endexHistory/data.csv").set_index("date")
 
 #TTF 101 histo
 
