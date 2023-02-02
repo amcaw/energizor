@@ -1,0 +1,9 @@
+import pandas as pd
+df2 = pd.read_csv("https://guillaumederval.github.io/endexHistory/data.csv").set_index("date")
+
+
+#TTF 101
+df2 = df2.loc["2023-02":]
+df2 = df2.reset_index()
+#df2 = df2[(df2["product"] == "JAN-23") & (df2["market"] == "TFM")].value.mean()
+df2 = df2[(df2["product"] == "MAR-23") & (df2["market"] == "TFM")].value.mean()
