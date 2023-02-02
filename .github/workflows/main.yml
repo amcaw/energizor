@@ -1,6 +1,6 @@
 name: Robot data
 
-# Cron pour faire fonctionner le script à 7h du matin yo
+# Cron pour faire fonctionner le script à 7h du matin
 on:
  push:
  #schedule:
