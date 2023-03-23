@@ -23,7 +23,7 @@ df = df.resample("M", origin="2001-01-01 00:00:00+01:00",label="left").mean()
 
 #la ligne pour reformater la date en mois/année (c'est ma foi plus joli)
 
-df.index = pd.to_datetime(df.index).strftime('%m/%Y')
+df.index = (pd.to_datetime(df.index) + DateOffset(months=1)).strftime('%m/%Y')
 
 df['Value'] = df['Value'].round(2)
 
