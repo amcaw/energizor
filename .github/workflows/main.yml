@@ -39,6 +39,9 @@ jobs:
 
       - name: endex be
         run: python endex.py
+      
+      - name: ttf_histo
+        run: ttf_old.py
 
       - name: Commit files
         run: |
