@@ -1,6 +1,8 @@
 import os
 
 import pandas as pd
+from pandas.tseries.offsets import DateOffset
+
 from entsoe import EntsoePandasClient
 
 from datetime import datetime, timedelta
